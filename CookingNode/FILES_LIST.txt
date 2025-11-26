@@ -1,0 +1,82 @@
+EPICURA COOKING SYSTEM - ROS2 INTEGRATION FILES
+================================================
+
+CORE PYTHON FILES (Required for ROS2)
+======================================
+1. CookingNode.py          - Main ROS2 node with publishers/subscribers
+2. CookingBot.py           - Hardware control and operations
+3. CookingScheduler.py     - Timing and segment scheduling
+4. RecipeModel.py          - Data models and recipe structure
+
+ROS2 CONFIGURATION FILES
+========================
+5. package.xml             - ROS2 package metadata
+6. setup.py                - Python package setup
+7. setup.cfg               - Setup configuration
+8. resource_epicura_cooking - Package marker file
+
+LAUNCH & CONFIG FILES
+=====================
+9. cooking_node_launch.py  - ROS2 launch file
+10. cooking_params.yaml     - Parameter configuration
+
+DOCUMENTATION FILES
+===================
+11. README.md               - Architecture overview
+12. ROS2_README.md          - Complete ROS2 usage guide
+13. INSTALL.md              - Installation instructions
+14. QUICK_START.md          - Quick start guide
+15. FILES_SUMMARY.md        - This file structure summary
+
+DEMO & TEST FILES
+=================
+16. main.py                 - Standalone demo (non-ROS2)
+17. test_cooking_node.py    - ROS2 testing script
+18. CookingEngine.py        - Legacy combined version
+
+DIRECTORY STRUCTURE FOR ROS2 PACKAGE
+=====================================
+epicura_cooking/
+├── epicura_cooking/
+│   ├── __init__.py (create empty file)
+│   ├── CookingNode.py
+│   ├── CookingBot.py
+│   ├── CookingScheduler.py
+│   └── RecipeModel.py
+├── launch/
+│   └── cooking_node_launch.py
+├── config/
+│   └── cooking_params.yaml
+├── resource/
+│   └── epicura_cooking
+├── package.xml
+├── setup.py
+└── setup.cfg
+
+QUICK INSTALL
+=============
+1. Install ROS2 Humble
+2. mkdir -p ~/epicura_ws/src
+3. Copy epicura_cooking/ folder to ~/epicura_ws/src/
+4. cd ~/epicura_ws
+5. colcon build --packages-select epicura_cooking
+6. source install/setup.bash
+7. ros2 launch epicura_cooking cooking_node_launch.py
+
+QUICK TEST
+==========
+ros2 topic list | grep epicura
+ros2 topic echo /epicura/cooking_status
+
+DOCUMENTATION GUIDE
+===================
+Start with: QUICK_START.md
+Then read: INSTALL.md (for installation)
+Then read: ROS2_README.md (for usage)
+Then read: README.md (for architecture)
+
+CONTACT
+=======
+Email: manas@epicura.ai
+Version: 1.0.0
+ROS2: Humble Hawksbill

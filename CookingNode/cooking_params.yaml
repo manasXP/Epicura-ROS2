@@ -1,0 +1,36 @@
+# Epicura Cooking Node Configuration
+# This file contains default parameters for the cooking node
+
+epicura_cooking_node:
+  ros__parameters:
+    # Status update rate (Hz)
+    status_update_rate: 1.0
+    
+    # Hardware configuration
+    enable_hardware: true
+    spi_bus: 0
+    
+    # Safety parameters
+    max_temperature: 250  # Celsius
+    enable_lpg_monitoring: true
+    emergency_stop_on_lpg_leak: true
+    
+    # Stirring parameters
+    max_stirring_rpm: 500
+    
+    # Dispenser parameters
+    asd_cartridge_count: 16
+    liquid_dispenser_flow_rate: 100.0  # ml/s
+    
+    # Temperature control
+    temperature_tolerance: 5.0  # Celsius
+    pid_kp: 1.0
+    pid_ki: 0.1
+    pid_kd: 0.05
+    
+    # Monitoring
+    enable_diagnostics: true
+    diagnostic_rate: 0.5  # Hz
+    
+    # Logging
+    log_level: "INFO"  # DEBUG, INFO, WARN, ERROR

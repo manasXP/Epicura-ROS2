@@ -44,7 +44,7 @@ class TempProfile:
 @dataclass
 class StirringProfile:
     duration: int  # Seconds
-    rpm: int  # Revolutions per minute
+    rpm: int  # Revolutions per minute (FIXED: was "int." with a period)
     profile_type: StirringProfileType
 
 @dataclass
